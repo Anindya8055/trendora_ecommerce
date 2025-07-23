@@ -24,4 +24,8 @@ export class AdminController {
     deleteAdmin(@Param('id', ParseIntPipe) id: number) {
         return this.adminService.remove(id);
     }
+    @Get('search')
+    searchAdmin(@Query('name') name: string) {
+        return this.adminService.searchAdmin(name);
+    }
 }
