@@ -26,5 +26,8 @@ export class AdminService {
         const removedAdmin = this.admins.splice(index, 1);
         return { message: 'Admin deleted successfully', admin: removedAdmin[0] };
     }
+     searchAdmin(name: string) {
+        return { message: 'Searched for admin', name };
+    }
     
 }
